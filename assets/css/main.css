@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .primary-font {
+    font-family: "El Messiri";
+  }
+  .secondary {
+    font-family: "Manjari";
+  }
+  .y-animation-hidden {
+    opacity: 0;
+    transform: translateY(100px);
+
+    transition: all 1s;
+  }
+
+  .x-animation-hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-10%);
+
+    transition: all 1s;
+  }
+  .y-animation-show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) rotate(0deg);
+  }
+  .x-animation-show {
+    opacity: 1;
+
+    filter: blur(0);
+    transform: translateX(0) rotate(0deg);
+  }
+  .proc:nth-child(1) {
+    transition-delay: 0ms;
+    transition-duration: 400ms;
+  }
+  .proc:nth-child(2) {
+    transition-delay: 50ms;
+    transition-duration: 400ms;
+  }
+  .proc:nth-child(3) {
+    transition-delay: 100ms;
+    transition-duration: 400ms;
+  }
+  .proc:nth-child(4) {
+    transition-delay: 150ms;
+    transition-duration: 400ms;
+  }
+  .proc:nth-child(5) {
+    transition-delay: 200ms;
+    transition-duration: 400ms;
+  }
+  .btn {
+    transition-delay: 150ms;
+    transition-duration: 400ms;
+  }
+}
