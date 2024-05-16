@@ -100,7 +100,7 @@ onMounted(() => {
       y: 0,
       maxWidth: "750px",
       duration: duration,
-      opacity: 1,
+      opacity: 0.3,
     });
   }
   function phon(del, item, y) {
