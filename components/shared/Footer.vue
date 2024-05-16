@@ -21,7 +21,6 @@
     </div>
     <div class="media w-1/3 text-end hidden md:flex items-center justify-end">
       <div class="flex gap-6">
-
         <div class="cursor-pointer" v-for="item in media">
           <Icon :name="item.icon" size="18" color="white" />
         </div>
@@ -33,10 +32,10 @@
 <script setup>
 let currentPage = 0;
 const pages = [
-  { path: "#main" },
-  { path: "#process" },
-  { path: "#services" },
-  { path: "#fff" },
+  { path: "/" },
+  { path: "/#process" },
+  { path: "/#services" },
+ 
 ];
 const media = [
   {
@@ -56,17 +55,22 @@ const media = [
     path: "",
   },
 ];
+const route = useRoute();
 const navigateUp = () => {
-  if (currentPage > 0) {
-    console.log(pages);
-    currentPage -= 1;
-    navigateTo(pages[currentPage].path);
+  for (let i = 0;i<pages.length;i++){
+    console.log(route.fullPath , pages[i].path )
+    if (`${pages[i].path}` == route.fullPath && i>0){
+      navigateTo(pages[i-1].path)
+    }
   }
 };
 const navigateDown = () => {
-  if (currentPage < pages.length - 1) {
-    currentPage += 1;
-    navigateTo(pages[currentPage].path);
+
+  for (let i = 0;i<pages.length;i++){
+    console.log(route.fullPath , pages[i].path )
+    if (`${pages[i].path}` == route.fullPath && i+1 < pages.length){
+      navigateTo(pages[i+1].path)
+    }
   }
 };
 </script>

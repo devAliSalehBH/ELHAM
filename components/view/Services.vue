@@ -21,7 +21,7 @@
               <div class="item not-active">Dash</div>
             </div>
             <div
-              class="bg-gradient-to-r bg-grid to-yellow-400 opacity-35 via-gray-500 from-gray-700 min-w-[750px] mt-44 min-h-24 fixed z-10"
+              class="bg-gradient-to-r bg-grid to-yellow-400 opacity-35 via-indigo-300 from-indigo-300 min-w-[750px] mt-44 min-h-24 fixed z-10"
             ></div>
             <div class="img flex  gap-5 items-center">
               <div
