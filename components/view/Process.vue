@@ -8,7 +8,7 @@
     >
       Our Process
     </p>
-    <div class="flex w-full md:px-28 justify-around">
+    <div class="flex w-full md:px-28 justify-center gap-36">
       <div class="proc y-animation-hidden" v-for="(item, i) in proc">
         <div
           class="flex flex-col gap-5"
