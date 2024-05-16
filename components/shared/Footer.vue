@@ -1,5 +1,5 @@
 <template>
-  <footer class="fixed bottom-0 mb-10 flex w-full px-16">
+  <footer class="fixed bottom-0 mb-5 flex w-full px-16">
     <div class="lang w-1/3 text-start text-white flex items-center">
       <div
         class="border border-white flex gap-4 items-center rounded-3xl px-5 py-2"
@@ -21,6 +21,7 @@
     </div>
     <div class="media w-1/3 text-end hidden md:flex items-center justify-end">
       <div class="flex gap-6">
+
         <div class="cursor-pointer" v-for="item in media">
           <Icon :name="item.icon" size="18" color="white" />
         </div>

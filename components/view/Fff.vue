@@ -1,7 +1,7 @@
 <template>
   <div
     id="fff"
-    class="min-h-full bg-white text-black flex items-center justify-center"
+    class="min-h-full bg-black text-white flex items-center justify-center"
   >
     <h1 class="title">Nuxt Anime</h1>
   </div>

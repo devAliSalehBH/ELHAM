@@ -5,3 +5,7 @@
     <SharedFooter />
   </div>
 </template>
+
+<script setup>
+
+</script>
