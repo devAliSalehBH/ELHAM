@@ -34,7 +34,7 @@
                 v-for="i in 4"
               >
                 <img
-                  class="max-h-64"
+                  class="max-h-64 min-h-64"
                   :class="`phone-${i}`"
                   src="/img/phone4.png"
                   alt=""
