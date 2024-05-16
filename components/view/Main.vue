@@ -12,7 +12,7 @@
     <p
       class="text-white secondary w-auto text-opacity-70 text-center md:px-44 lg:px-72 font-thin md:text-lg lg:text-xl"
     >
-      We Assure you the Best Web Designing, Mobile App Development & Digital
+      We Assure you the Best Web Designing, Mobile App Development & Digital<br>
       Marketing Services in the Kingdom of Saudi Arabia
     </p>
     <div class="brand flex flex-col mt-5 items-center justify-center w-full">
