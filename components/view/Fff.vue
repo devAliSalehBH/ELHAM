@@ -3,7 +3,7 @@
     id="fff"
     class="min-h-full bg-black text-white flex items-center justify-center"
   >
-    <h1 class="title">Nuxt Anime</h1>
+    <h1 class="title">Get in Touch</h1>
   </div>
 </template>
 

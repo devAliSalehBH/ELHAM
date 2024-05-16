@@ -4,7 +4,7 @@
       <div class="item-2 min-h-screen bg-white">
         <div class="item-3 min-h-screen bg-purple-600">
           <div
-            class="item-4 min-h-screen flex justify-center flex-col gap-4 items-center bg-black"
+            class="item-4 min-h-screen overflow-hidden flex justify-center flex-col gap-4 items-center bg-black"
           >
             <div
               class="ask top-0 fixed right-20 px-5 py-3 rounded-b-2xl bg-gray-400 font-semibold"
@@ -25,7 +25,7 @@
             ></div>
             <div class="img flex px-80 gap-5 items-center">
               <div
-                class="flex items-center justify-center max-w-10 max-h-10 min-w-10 min-h-10 rounded-full z-30 mb-3 bg-white"
+                class="flex items-center left-btn justify-center max-w-10 max-h-10 min-w-10 min-h-10 rounded-full z-30 mb-3 bg-white"
               >
                 <Icon name="ic:baseline-arrow-back" color="black" />
               </div>
@@ -42,7 +42,7 @@
               </div>
 
               <div
-                class="flex items-center justify-center max-w-10 max-h-10 min-w-10 min-h-10 rounded-full z-30 mb-3 bg-white"
+                class="flex items-center right-btn justify-center max-w-10 max-h-10 min-w-10 min-h-10 rounded-full z-30 mb-3 bg-white"
               >
                 <Icon name="ic:baseline-arrow-forward" color="black" />
               </div>
@@ -58,11 +58,32 @@
 const { $gsap, $ScrollTrigger } = useNuxtApp();
 
 onMounted(() => {
+  function btn(del, item, xFrom) {
+    let tl = $gsap.timeline({
+      scrollTrigger: {
+        trigger: item,
+        toggleActions: "restart none restart none",
+      },
+    });
+    tl.from(
+      item,
+      {
+        x: xFrom,
+        duration: 0.5,
+        opacity: 0,
+      },
+      `+=${del}`
+    ).to(item, {
+      x: 0,
+      duration: 0.5,
+      opacity: 1,
+    });
+  }
   function grid(duration, item, y) {
     let tl = $gsap.timeline({
       scrollTrigger: {
         trigger: item,
-        toggleActions: "restart complete restart complete",
+        toggleActions: "restart none restart none",
       },
     });
     tl.from(
@@ -86,7 +107,7 @@ onMounted(() => {
     let tl = $gsap.timeline({
       scrollTrigger: {
         trigger: item,
-        toggleActions: "restart complete restart complete",
+        toggleActions: "restart none restart none",
       },
     });
     tl.from(
@@ -107,7 +128,7 @@ onMounted(() => {
     let tl = $gsap.timeline({
       scrollTrigger: {
         trigger: item,
-        toggleActions: "restart pause restart pause",
+        toggleActions: "restart restart restart restart",
       },
     });
     tl.from(
@@ -151,7 +172,7 @@ onMounted(() => {
       });
   }
   let dur = 0.5;
-  let del = 1.2;
+  let del = 1.1;
   for (let i = 0; i <= 4; i++) {
     anim(`${dur}`, `.item-${i + 1}`);
     phon(del, `.phone-${i}`, 113);
@@ -160,6 +181,9 @@ onMounted(() => {
   }
   DtU("0.5", ".main-text", 40);
   DtU("0.5", ".platform", 200);
-  grid("0.5", ".bg-grid", 52);
+  grid("0.3", ".bg-grid", 52);
+  btn(2, ".left-btn", 50);
+  btn(2, ".right-btn", -50);
+  DtU("1", ".ask", -50);
 });
 </script>
