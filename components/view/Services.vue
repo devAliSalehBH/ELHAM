@@ -23,7 +23,7 @@
             <div
               class="bg-gradient-to-r bg-grid to-yellow-600 opacity-55 via-gray-500 from-gray-700 min-w-[750px] mt-44 min-h-24 fixed z-10"
             ></div>
-            <div class="img flex px-80 gap-5 items-center">
+            <div class="img flex  gap-5 items-center">
               <div
                 class="flex items-center left-btn justify-center max-w-10 max-h-10 min-w-10 min-h-10 rounded-full z-30 mb-3 bg-white"
               >
