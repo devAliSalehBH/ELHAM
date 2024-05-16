@@ -21,7 +21,7 @@
               <div class="item not-active">Dash</div>
             </div>
             <div
-              class="bg-gradient-to-r bg-grid to-yellow-600 opacity-55 via-gray-500 from-gray-700 min-w-[700px] mt-44 min-h-24 fixed z-10"
+              class="bg-gradient-to-r bg-grid to-yellow-600 opacity-55 via-gray-500 from-gray-700 min-w-[750px] mt-44 min-h-24 fixed z-10"
             ></div>
             <div class="img flex px-80 gap-5 items-center">
               <div
@@ -98,7 +98,7 @@ onMounted(() => {
       "+=1"
     ).to(item, {
       y: 0,
-      maxWidth: "700px",
+      maxWidth: "750px",
       duration: duration,
       opacity: 1,
     });
