@@ -2,7 +2,6 @@
   <ViewMain />
   <ViewProcess />
   <ViewServices />
-  <ViewFff />
 </template>
 
 <script setup>
