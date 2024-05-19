@@ -16,14 +16,26 @@
               UI/UX Design
             </h2>
             <div class="platform flex gap-10 opacity-85 py-5">
-              <div class="item not-active">Web</div>
-              <div class="item active">App</div>
-              <div class="item not-active">Dash</div>
+              <div
+                @click="changeActive(1)"
+                class="item not-active cursor-pointer"
+              >
+                Web
+              </div>
+              <div @click="changeActive(2)" class="item active bg-size-200 cursor-pointer">
+                App
+              </div>
+              <div
+                @click="changeActive(3)"
+                class="item not-active cursor-pointer"
+              >
+                Dash
+              </div>
             </div>
             <div
               class="bg-gradient-to-r bg-grid to-yellow-400 opacity-35 via-indigo-300 from-indigo-300 min-w-[750px] mt-44 min-h-24 fixed z-10"
             ></div>
-            <div class="img flex  gap-5 items-center">
+            <div class="img flex gap-5 items-center">
               <div
                 class="flex items-center left-btn justify-center max-w-10 max-h-10 min-w-10 min-h-10 rounded-full z-30 mb-3 bg-white"
               >
@@ -145,7 +157,7 @@ onMounted(() => {
       opacity: 1,
     });
   }
-  function anim(duration, item) {
+  function anim(duration, del, item) {
     let tl = $gsap.timeline({
       paused: true,
       scrollTrigger: {
@@ -155,11 +167,15 @@ onMounted(() => {
       },
     });
 
-    tl.from(item, {
-      y: "+=50",
-      duration: duration * 0.5,
-      opacity: 0.5,
-    })
+    tl.from(
+      item,
+      {
+        y: "+=50",
+        duration: duration * 0.5,
+        opacity: 0.5,
+      },
+      `+=${del}`
+    )
       .to(item, {
         y: "0",
         duration: duration * 0.5,
@@ -171,13 +187,15 @@ onMounted(() => {
         duration: duration * 0.5,
       });
   }
-  let dur = 0.5;
+  let dur = 2;
+  let delanm = 0;
   let del = 1.1;
   for (let i = 0; i <= 4; i++) {
-    anim(`${dur}`, `.item-${i + 1}`);
+    anim(`${dur}`, delanm, `.item-${i + 1}`);
     phon(del, `.phone-${i}`, 113);
     dur += 0.5;
     del += 0.1;
+    delanm -= 0.5;
   }
   DtU("0.5", ".main-text", 40);
   DtU("0.5", ".platform", 200);
@@ -186,4 +204,16 @@ onMounted(() => {
   btn(2, ".right-btn", -50);
   DtU("1", ".ask", -50);
 });
+function changeActive(index) {
+  const button = document.querySelectorAll(".item");
+  for (let i = 0; i < button.length; i++) {
+    if (i + 1 == index) {
+      button[i].classList.add("active");
+      button[i].classList.remove("not-active");
+    } else {
+      button[i].classList.add("not-active");
+      button[i].classList.remove("active");
+    }
+  }
+}
 </script>
