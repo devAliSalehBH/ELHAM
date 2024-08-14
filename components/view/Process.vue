@@ -1,7 +1,7 @@
 <template>
   <div
     id="process"
-    class="flex min-h-screen flex-col gap-10 justify-center py-12 bg-sky-950"
+    class="flex min-h-screen flex-col gap-10 justify-center py-12"
   >
     <p
       class="primary-font mx-auto text-center w-auto text-4xl md:text-5xl lg:text-6xl font-extrabold text-white [text-shadow:_2px_4px_7px_rgb(0_0_0/_40%)]"
@@ -12,7 +12,15 @@
       <div class="proc y-animation-hidden" v-for="(item, i) in proc">
         <div
           class="flex flex-col gap-5"
-          :class="clsx(i == 0 ? 'items-start lg:items-center':i == 4 ? 'items-end lg:items-center':'items-center')"
+          :class="
+            clsx(
+              i == 0
+                ? 'items-start lg:items-center'
+                : i == 4
+                ? 'items-end lg:items-center'
+                : 'items-center'
+            )
+          "
         >
           <div
             class="fixed bottom-0 rounded-3xl p-5 bg-gradient-to-r from-purple-500 to-indigo-400 mb-32 w-60 mx-0 opacity-90 text-white"

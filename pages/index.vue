@@ -2,6 +2,7 @@
   <ViewMain />
   <ViewProcess />
   <ViewServices />
+  <ViewFff />
 </template>
 
 <script setup>
@@ -65,6 +66,5 @@ onMounted(() => {
 <style>
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 </style>

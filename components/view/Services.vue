@@ -22,7 +22,10 @@
               >
                 Web
               </div>
-              <div @click="changeActive(2)" class="item active bg-size-200 cursor-pointer">
+              <div
+                @click="changeActive(2)"
+                class="item active bg-size-200 cursor-pointer"
+              >
                 App
               </div>
               <div
