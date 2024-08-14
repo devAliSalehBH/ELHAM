@@ -13,8 +13,10 @@
       Marketing Services in the Kingdom of Saudi Arabia
     </p>
     <div class="mt-5 flex flex-col items-center">
-      <img class="xl:size-32" src="/public/img/icons/Logo.svg" alt="" />
-      <p class="primary-font text-xl xl:text-3xl font-bold tracking-[.7rem]">
+      <img class="xl:size-22" src="/public/img/icons/Logo.svg" alt="" />
+      <p
+        class="primary-font text-white text-xl xl:text-2xl font-bold tracking-[.7rem]"
+      >
         ELHAM
       </p>
     </div>
