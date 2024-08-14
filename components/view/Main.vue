@@ -12,11 +12,11 @@
       We Assure you the Best Web Designing, Mobile App Development & Digital<br />
       Marketing Services in the Kingdom of Saudi Arabia
     </p>
-    <div class="brand flex flex-col mt-5 items-center justify-center w-full">
-      <div class="logo text-red-600">
-        <img src="/public/favicon.ico" alt="" />
-      </div>
-      <div class="primary-font text-xl text-white ">ELHAM</div>
+    <div class="mt-5 flex flex-col items-center">
+      <img class="xl:size-32" src="/public/img/icons/Logo.svg" alt="" />
+      <p class="primary-font text-xl xl:text-3xl font-bold tracking-[.7rem]">
+        ELHAM
+      </p>
     </div>
   </div>
 </template>
